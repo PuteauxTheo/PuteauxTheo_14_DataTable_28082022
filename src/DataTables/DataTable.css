@@ -1,0 +1,19 @@
+.top-table, .bot-table { 
+    display: flex;
+    flex-direction: row;
+}
+
+.dataTable-length label{
+    display: flex;
+    flex-direction: row;
+}
+
+.dataTable-search label{
+    display: flex;
+    flex-direction: row;
+}
+
+.pagination{
+    display: flex;
+    flex-direction:row;
+}
