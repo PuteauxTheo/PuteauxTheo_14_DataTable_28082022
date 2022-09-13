@@ -1,6 +1,14 @@
+.dataTable{
+    display: flex;
+    max-width: 1200px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 .top-table, .bot-table { 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .dataTable-length label{
@@ -16,4 +24,30 @@
 .pagination{
     display: flex;
     flex-direction:row;
+}
+
+.pagination-btn{
+    border: none;
+    background: none;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+}
+
+.pagination-btn:hover{
+    border-color:#000;
+    background: #525252;
+    cursor:pointer;
+    color: #fff;
+}
+
+.active{
+    border-color: #000;
+    background: #f1f1f1;
+}
+
+.disabled:hover{
+    cursor: default;
+    background: none;
+    color: #000;
+    border-color:transparent;
 }
