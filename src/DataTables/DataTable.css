@@ -51,3 +51,48 @@
     color: #000;
     border-color:transparent;
 }
+
+.label-column{
+    display: flex;
+    flex-direction: row;
+}
+
+.arrows{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.arrow-up{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 1px;
+    width: 5px;
+    height: 5px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.arrow-down{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 1px;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow-active{
+    border-color: green;
+}
+
+.arrow-disabled{
+    border-color: grey;
+}
+
+
+
+
