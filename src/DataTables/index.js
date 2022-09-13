@@ -13,21 +13,21 @@ export default function DataTable({ labels, data }) {
     const [currentPage, setCurrentPage] = useState(1);
     const [entriesShown, setEntriesShown] = useState(10);
 
+
     const minShow = currentPage === 1 ? 1 : (currentPage - 1) * entriesShown + 1;
     const maxShow = currentPage * entriesShown < data.length ? currentPage * entriesShown : data.length ;
-
     return (
-        <div>
+        <div className="dataTable">
             <div className="top-table">
-                <LengthEntries />
+                <LengthEntries handleChange={setEntriesShown} />
                 <Search />
             </div>
 
-            <Table labels={labels} data={data}/>
+            <Table labels={labels} data={data} minShow={minShow} max={maxShow} />
 
             <div className="bot-table">
                 <ShowEntries minShow={minShow} maxShow={maxShow} totalEntries={data.length}/>
-                <Pagination />
+                <Pagination currentPage={currentPage} handleClick={setCurrentPage} totalEntries={data.length} entriesShown={entriesShown}/>
             </div>
         </div>
     )
