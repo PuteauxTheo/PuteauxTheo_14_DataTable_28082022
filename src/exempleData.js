@@ -146,6 +146,7 @@ export const exempleData = [
 ]
 
 export const exempleLabels = [
+    { text: "ID Employee", value: "idEmployee"},
     { text: "First Name", value: "firstName" },
     { text: "Last Name", value: "lastName" },
     { text: "Start Date", value: "startDate" },
