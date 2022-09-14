@@ -1,3 +1,5 @@
+/* BASE */
+
 .dataTable{
     display: flex;
     max-width: 1200px;
@@ -9,17 +11,39 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px 5px;
 }
+
+.bot-table{
+    margin-top: 10px;
+    border-top: 1px solid black;
+}
+
+/* LENGTH ENTRIES */
 
 .dataTable-length label{
     display: flex;
     flex-direction: row;
 }
 
+.dataTable-length select{
+    height: 20px;
+    margin: auto 5px;
+}
+
+/* SEARCH */
+
 .dataTable-search label{
     display: flex;
     flex-direction: row;
 }
+
+.dataTable-search input{
+    height: 20px;
+    margin: auto 5px;
+}
+
+/* PAGINATION */
 
 .pagination{
     display: flex;
@@ -52,6 +76,12 @@
     border-color:transparent;
 }
 
+/* TABLE */
+
+.table{
+    border-collapse: collapse;
+}
+
 .label-column{
     display: flex;
     flex-direction: row;
@@ -65,22 +95,22 @@
 
 .arrow-up{
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 1px;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
 
 .arrow-down{
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 1px;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
@@ -92,6 +122,18 @@
 .arrow-disabled{
     border-color: grey;
 }
+
+.table-header-cell{
+    padding: 0px 10px 15px 10px;
+    border-bottom: 1px solid black;
+}
+
+.table-cell{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+}
+
 
 
 
