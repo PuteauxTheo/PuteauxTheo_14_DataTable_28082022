@@ -1,6 +1,5 @@
 export const exempleData = [
     {
-        idEmployee: 0,
         firstName: "Paul",
         lastName: "Georges",
         dateOfBirth: "06/18/2000",
@@ -12,7 +11,6 @@ export const exempleData = [
         zipCode: "44000"
     },
     {
-        idEmployee: 1,
         firstName: "Armand",
         lastName: "Thierry",
         dateOfBirth: "02/09/1998",
@@ -24,7 +22,6 @@ export const exempleData = [
         zipCode: "75000"
     },
     {
-        idEmployee: 2,
         firstName: "Tony",
         lastName: "Parker",
         dateOfBirth: "11/18/1987",
@@ -36,7 +33,6 @@ export const exempleData = [
         zipCode: "72000"
     },
     {
-        idEmployee: 3,
         firstName: "Paul",
         lastName: "Georges",
         dateOfBirth: "06/18/2000",
@@ -48,7 +44,6 @@ export const exempleData = [
         zipCode: "44000"
     },
     {
-        idEmployee: 4,
         firstName: "Armand",
         lastName: "Thierry",
         dateOfBirth: "02/09/1998",
@@ -60,7 +55,6 @@ export const exempleData = [
         zipCode: "75000"
     },
     {
-        idEmployee: 5,
         firstName: "Tony",
         lastName: "Parker",
         dateOfBirth: "11/18/1987",
@@ -72,7 +66,6 @@ export const exempleData = [
         zipCode: "72000"
     },
     {
-        idEmployee: 6,
         firstName: "Paul",
         lastName: "Georges",
         dateOfBirth: "06/18/2000",
@@ -84,7 +77,6 @@ export const exempleData = [
         zipCode: "44000"
     },
     {
-        idEmployee: 7,
         firstName: "Armand",
         lastName: "Thierry",
         dateOfBirth: "02/09/1998",
@@ -96,7 +88,6 @@ export const exempleData = [
         zipCode: "75000"
     },
     {
-        idEmployee: 8,
         firstName: "Tony",
         lastName: "Parker",
         dateOfBirth: "11/18/1987",
@@ -108,7 +99,6 @@ export const exempleData = [
         zipCode: "72000"
     },
     {
-        idEmployee: 9,
         firstName: "Paul",
         lastName: "Georges",
         dateOfBirth: "06/18/2000",
@@ -120,7 +110,6 @@ export const exempleData = [
         zipCode: "44000"
     },
     {
-        idEmployee: 10,
         firstName: "Armand",
         lastName: "Thierry",
         dateOfBirth: "02/09/1998",
@@ -132,7 +121,6 @@ export const exempleData = [
         zipCode: "75000"
     },
     {
-        idEmployee: 11,
         firstName: "Tony",
         lastName: "Parker",
         dateOfBirth: "11/18/1987",
@@ -146,7 +134,6 @@ export const exempleData = [
 ]
 
 export const exempleLabels = [
-    { text: "ID Employee", value: "idEmployee"},
     { text: "First Name", value: "firstName" },
     { text: "Last Name", value: "lastName" },
     { text: "Start Date", value: "startDate" },
