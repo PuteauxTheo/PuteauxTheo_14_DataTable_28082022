@@ -7,12 +7,11 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
 
 
     return (
-        <table>
+        <table className="table">
             <thead>
-                <tr>
+                <tr className="table-header-row">
                     {labels.map(el =>
-
-                        <th onClick={() => handleSort(el.value)}>
+                        <th onClick={() => handleSort(el.value)} className="table-header-cell">
                             <div className="label-column">
                                 <span>{el.text}</span>
                                 <div className="arrows">
@@ -28,11 +27,9 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
                                             : "arrow-down"
                                     }>                                    
                                     </div>
-
                                 </div>
                             </div>
                         </th>
-
                     )}
                 </tr>
             </thead>
@@ -43,12 +40,11 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
                 }
                 {/* Display data */}
                 {data.map((el, index) => {
-
                     if (index + 1 >= minShow && index < maxShow) {
                         return (
-                            <tr>
+                            <tr className="table-row">
                                 {Object.values(el).map((value) => (
-                                    <td>{value}</td>
+                                    <td className="table-cell">{value}</td>
                                 ))}
                             </tr>
                         );
