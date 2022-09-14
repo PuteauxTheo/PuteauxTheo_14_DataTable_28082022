@@ -1,6 +1,6 @@
 
 
-export default function Table({ labels, data, minShow, maxShow, sort, handleSort }) {
+export default function Table({ labels, data, minShow, maxShow, sort, handleSort, sortedData }) {
 
     const { column , isAsc } = sort;
 
@@ -38,7 +38,9 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
             </thead>
             <tbody>
                 {/* if Datatable is empty */}
-
+                {
+                    sortedData.length < 1 && <span>No matching records found</span>
+                }
                 {/* Display data */}
                 {data.map((el, index) => {
 
