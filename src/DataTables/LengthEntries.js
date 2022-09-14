@@ -10,7 +10,9 @@ export default function LengthEntries({ value, handleChange }) {
                 <p>Show</p>
                 <select value={value} onChange={e => handleEntriesShown(e)}>
                     <option value={10}>10</option>
-                    <option value={20}>20</option>
+                    <option value={25}>25</option>
+                    <option value={50}>50</option>
+                    <option value={100}>100</option>
                 </select>
                 <p>entries</p>
             </label>
