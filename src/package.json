@@ -1,0 +1,27 @@
+{
+  "name": "data-table-plugin-react",
+  "version": "1.0.1",
+  "description": "DataTable plugin for React ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PuteauxTheo/PuteauxTheo_14_DataTable_28082022.git"
+  },
+  "author": "puteauxtheo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PuteauxTheo/PuteauxTheo_14_DataTable_28082022/issues"
+  },
+  "homepage": "https://github.com/PuteauxTheo/PuteauxTheo_14_DataTable_28082022#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6"
+  }
+}
