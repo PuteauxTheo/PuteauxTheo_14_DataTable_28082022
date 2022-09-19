@@ -1,4 +1,4 @@
-
+import React from "react";
 
 export default function Table({ labels, data, minShow, maxShow, sort, handleSort, sortedData }) {
 
@@ -10,8 +10,8 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
         <table className="table">
             <thead>
                 <tr className="table-header-row">
-                    {labels.map(el =>
-                        <th onClick={() => handleSort(el.value)} className="table-header-cell">
+                    {labels.map((el,index) =>
+                        <th key={index} onClick={() => handleSort(el.value)} className="table-header-cell">
                             <div className="label-column">
                                 <span>{el.text}</span>
                                 <div className="arrows">
@@ -42,9 +42,9 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
                 {data.map((el, index) => {
                     if (index + 1 >= minShow && index < maxShow) {
                         return (
-                            <tr className="table-row">
-                                {Object.values(el).map((value) => (
-                                    <td className="table-cell">{value}</td>
+                            <tr key={index} className="table-row">
+                                {Object.values(el).map((value, index) => (
+                                    <td key={value+""+index}className="table-cell">{value}</td>
                                 ))}
                             </tr>
                         );

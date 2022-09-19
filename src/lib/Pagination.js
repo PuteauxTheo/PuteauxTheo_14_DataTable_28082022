@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Pagination({ currentPage, handleClick, totalEntries, entriesShown}) {
 
     const nbPage = Math.ceil(totalEntries / entriesShown);
@@ -19,7 +21,7 @@ export default function Pagination({ currentPage, handleClick, totalEntries, ent
             {
                 nbPageArray.map( (el, index) => (
 
-                    <button type="button" onClick={() => handleClick(index+1)} className={currentPage === index + 1 ? "pagination-btn active" : "pagination-btn"}>
+                    <button key={el+""+index}type="button" onClick={() => handleClick(index+1)} className={currentPage === index + 1 ? "pagination-btn active" : "pagination-btn"}>
                         {index+1}
                     </button>
         

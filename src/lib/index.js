@@ -1,4 +1,5 @@
 import "./DataTable.css";
+import React from "react";
 import { useState } from "react";
 import LengthEntries from "./LengthEntries";
 import Search from "./Search";
@@ -23,7 +24,7 @@ export default function DataTable({ labels, data }) {
         if(sort.column === label){
             setSort({
                 ...sort,
-                isAsc: !sort.isAsc
+                isAsc: !sort.isAsc,
             });
         }else{
             setSort({

@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ShowEntries({ minShow, maxShow, totalEntries, totalEntriesShown, isSearching, minShowFiltered, maxShowFiltered}) {
     return (
         <div className="showing-entries">

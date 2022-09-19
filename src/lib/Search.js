@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Search({ data, handleSearchData, handleIsSearching }){
 
     const handleSearch = (e) => {
