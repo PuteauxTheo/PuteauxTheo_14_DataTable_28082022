@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function LengthEntries({ value, handleChange }) {
 
@@ -20,4 +21,9 @@ export default function LengthEntries({ value, handleChange }) {
             </label>
         </div>
     )
+}
+
+LengthEntries.propTypes = {
+    value: PropTypes.number.isRequired,
+    handleChange: PropTypes.func.isRequired,
 }

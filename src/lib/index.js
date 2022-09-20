@@ -1,11 +1,13 @@
 import "./DataTable.css";
 import React from "react";
+import PropTypes from "prop-types"
 import { useState } from "react";
 import LengthEntries from "./LengthEntries";
 import Search from "./Search";
 import Table from "./Table";
 import ShowEntries from "./ShowEntries";
 import Pagination from "./Pagination";
+
 
 
 
@@ -74,7 +76,7 @@ export default function DataTable({ labels, data }) {
     return (
         <div className="dataTable">
             <div className="top-table">
-                <LengthEntries handleChange={setEntriesShown} />
+                <LengthEntries value={entriesShown} handleChange={setEntriesShown} />
                 <Search  data={data} handleSearchData={setSortedData} handleIsSearching={setIsSearching}/>
             </div>
 
@@ -87,4 +89,9 @@ export default function DataTable({ labels, data }) {
         </div>
     )
 
+}
+
+DataTable.propTypes = {
+    labels: PropTypes.array.isRequired,
+    data: PropTypes.array.isRequired,
 }

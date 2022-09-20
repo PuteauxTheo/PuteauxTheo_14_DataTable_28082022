@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Pagination({ currentPage, handleClick, totalEntries, entriesShown}) {
 
@@ -30,4 +31,11 @@ export default function Pagination({ currentPage, handleClick, totalEntries, ent
             <button type="button" className={currentPage === nbPage ? "pagination-btn disabled" : "pagination-btn"} onClick={handleNextPage}>Next</button>
         </div>
     )
+}
+
+Pagination.propTypes = { 
+    currentPage: PropTypes.number.isRequired,
+    handleClick: PropTypes.func.isRequired,
+    totalEntries: PropTypes.number.isRequired,
+    entriesShown: PropTypes.number.isRequired,
 }

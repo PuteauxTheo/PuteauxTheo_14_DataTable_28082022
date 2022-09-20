@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function ShowEntries({ minShow, maxShow, totalEntries, totalEntriesShown, isSearching, minShowFiltered, maxShowFiltered}) {
     return (
@@ -11,4 +12,14 @@ export default function ShowEntries({ minShow, maxShow, totalEntries, totalEntri
             
         </div>
     )
+}
+
+ShowEntries.propTypes = {
+    minShow: PropTypes.number.isRequired,
+    maxShow: PropTypes.number.isRequired,
+    totalEntries: PropTypes.number.isRequired,
+    totalEntriesShown: PropTypes.number,
+    isSearching: PropTypes.bool,
+    minShowFiltered: PropTypes.number.isRequired,
+    maxShowFiltered: PropTypes.number.isRequired,
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Table({ labels, data, minShow, maxShow, sort, handleSort, sortedData }) {
 
@@ -54,4 +55,14 @@ export default function Table({ labels, data, minShow, maxShow, sort, handleSort
             </tbody>
         </table>
     )
+}
+
+Table.propTypes = {
+    labels: PropTypes.array.isRequired,
+    data:  PropTypes.array.isRequired,
+    minShow:  PropTypes.number.isRequired,
+    maxShow:  PropTypes.number.isRequired,
+    sort: PropTypes.object.isRequired,
+    handleSort:  PropTypes.func.isRequired,
+    sortedData:  PropTypes.array.isRequired,
 }

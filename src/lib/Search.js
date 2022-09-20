@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 
 export default function Search({ data, handleSearchData, handleIsSearching }){
 
@@ -27,4 +28,10 @@ export default function Search({ data, handleSearchData, handleIsSearching }){
             </label>
         </div>
     )
+}
+
+Search.propTypes = {
+    data: PropTypes.array.isRequired,
+    handleSearchData: PropTypes.func.isRequired,
+    handleIsSearching: PropTypes.func.isRequired,
 }
