@@ -13,6 +13,8 @@ require("./DataTable.css");
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _LengthEntries = _interopRequireDefault(require("./LengthEntries"));
 
 var _Search = _interopRequireDefault(require("./Search"));
@@ -103,6 +105,7 @@ function DataTable(_ref) {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "top-table"
   }, /*#__PURE__*/_react.default.createElement(_LengthEntries.default, {
+    value: entriesShown,
     handleChange: setEntriesShown
   }), /*#__PURE__*/_react.default.createElement(_Search.default, {
     data: data,
@@ -132,3 +135,8 @@ function DataTable(_ref) {
     entriesShown: entriesShown
   })));
 }
+
+DataTable.propTypes = {
+  labels: _propTypes.default.array.isRequired,
+  data: _propTypes.default.array.isRequired
+};

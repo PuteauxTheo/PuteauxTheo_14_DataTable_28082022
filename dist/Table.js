@@ -9,6 +9,8 @@ require("core-js/modules/es.array.sort.js");
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Table(_ref) {
@@ -55,3 +57,13 @@ function Table(_ref) {
     return null;
   })));
 }
+
+Table.propTypes = {
+  labels: _propTypes.default.array.isRequired,
+  data: _propTypes.default.array.isRequired,
+  minShow: _propTypes.default.number.isRequired,
+  maxShow: _propTypes.default.number.isRequired,
+  sort: _propTypes.default.object.isRequired,
+  handleSort: _propTypes.default.func.isRequired,
+  sortedData: _propTypes.default.array.isRequired
+};

@@ -7,6 +7,8 @@ exports.default = Pagination;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Pagination(_ref) {
@@ -46,3 +48,10 @@ function Pagination(_ref) {
     onClick: handleNextPage
   }, "Next"));
 }
+
+Pagination.propTypes = {
+  currentPage: _propTypes.default.number.isRequired,
+  handleClick: _propTypes.default.func.isRequired,
+  totalEntries: _propTypes.default.number.isRequired,
+  entriesShown: _propTypes.default.number.isRequired
+};

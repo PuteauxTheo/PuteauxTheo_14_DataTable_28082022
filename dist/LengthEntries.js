@@ -7,6 +7,8 @@ exports.default = LengthEntries;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function LengthEntries(_ref) {
@@ -34,3 +36,8 @@ function LengthEntries(_ref) {
     value: 100
   }, "100")), /*#__PURE__*/_react.default.createElement("p", null, "entries")));
 }
+
+LengthEntries.propTypes = {
+  value: _propTypes.default.number.isRequired,
+  handleChange: _propTypes.default.func.isRequired
+};

@@ -11,6 +11,8 @@ require("core-js/modules/es.string.includes.js");
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Search(_ref) {
@@ -43,3 +45,9 @@ function Search(_ref) {
     onChange: e => handleSearch(e)
   })));
 }
+
+Search.propTypes = {
+  data: _propTypes.default.array.isRequired,
+  handleSearchData: _propTypes.default.func.isRequired,
+  handleIsSearching: _propTypes.default.func.isRequired
+};
