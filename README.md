@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Data-Table plugin for React 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A ready-to-use DataTable component for React projects. It adds features to manipulate data easily.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Display entries with select ( 10 / 25 / 50 / 100 )
+- Searching accross all entries
+- Sorting columns by ascending or descending 
+- DataTable adapting his entries with number of display data
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Download
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[data-table-react-plugin](https://www.npmjs.com/package/data-table-react-plugin)
 
-### `npm test`
+### Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 17.0.2+
 
-### `npm run build`
+- using NPM
+  `npm install data-table-react-plugin`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- using yarn
+  `yarn add data-table-react-plugin`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the plugin, import it in your React component.
+It needs 2 props to work: `labels` and `data`
 
-### `npm run eject`
+dataTableComponent.js_
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```javascript
+import DataTable from "data-table-react-plugin";
+import { labels, data } from "./examplesData";
+const Component = () => {
+  <DataTable labels={labels} data={data} />;
+};
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+examplesData.js_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```javascript
+const exempleLabels = [
+    { text: "First Name", value: "firstName" },
+    { text: "Last Name", value: "lastName" },
+    { text: "Start Date", value: "startDate" },
+    { text: "Date of Birth", value: "dateOfBirth" },
+    { text: "Department", value: "department" },
+    { text: "Street", value: "street" },
+    { text: "City", value: "city" },
+    { text: "State", value: "state" },
+    { text: "Zip Code", value: "zipCode" },
+];
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const exampleData = [
+  {
+        firstName: "Elon",
+        lastName: "Musk",
+        startDate: "04/14/2021",
+        dateOfBirth: "28/06/1971",
+        department: "Marketing",
+        street: "Main Street",
+        city: "NY",
+        state: "AL",
+        zipCode: "01800",
+      },
+      {
+        firstName: "Tim",
+        lastName: "Cook",
+        startDate: "03/02/2020",
+        dateOfBirth: "01/11/1960",
+        department: "Sales",
+        street: "Helia Street",
+        city: "San Francisco",
+        state: "AK",
+        zipCode: "85699",
+      },
+];
+export { exampleLabels, exampleData };
+```
 
-## Learn More
+### API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+DataTable needs 2 props:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `data` that contains the data for the rows
+- `labels` that defines the name of the columns
 
-### Code Splitting
+The keys of each object element in the `data` array should be the same as the `value` keys of each label element of the `labels` array.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+_DataTable props_
 
-### Analyzing the Bundle Size
+- `data` array of objects containing a single row
+- `labels` array of objects with the labels of the columns
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_data_
 
-### Making a Progressive Web App
+```javascript
+[
+  {
+    columnName1: "text1",
+    columnName2: "text2",
+    columnName3: "text3",
+  },
+  {
+    columnName1: "text1",
+    columnName2: "text2",
+    columnName3: "text3",
+  },
+];
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+_labels_
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+[
+  { text: "Column Name 1", value: "columnName1" },
+  { text: "Column Name 2", value: "columnName2" },
+  { text: "Column Name 3", value: "columnName3" },
+];
+```
